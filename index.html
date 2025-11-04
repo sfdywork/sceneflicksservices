@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Scene Flicks Services Home</title>
+  <meta name="description" content="Team Building & Graphics Design — Scene Flicks Services" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <!-- PRELOADER -->
+  <div id="preloader" class="preloader" aria-hidden="false">
+    <div class="preloader-inner">
+      <svg width="64" height="64" viewBox="0 0 100 100" aria-hidden="true">
+        <circle cx="50" cy="50" r="40" stroke="var(--brand)" stroke-width="10" stroke-linecap="round" fill="none" stroke-dasharray="60 240"/>
+      </svg>
+      <div class="preloader-text">Scene Flicks Services</div>
+    </div>
+  </div>
+
+  <!-- COMPONENTS INJECTION POINTS -->
+  <div id="site-header"></div>
+
+  <main id="main-content" class="site-main">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1 class="hero-title">We believe in creation</h1>
+          <p class="hero-lead">Custom event experiences and striking graphic design created to connect people and brands.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="pages/gallery.html">Explore Gallery</a>
+            <a class="btn" href="pages/services.html">Our Services</a>
+          </div>
+          <div class="hero-quick">
+            <a class="quick-link" href="pages/gallery.html#events">Events</a>
+            <a class="quick-link" href="pages/gallery.html#flyers">Flyers</a>
+            <a class="quick-link" href="pages/contact.html">Book a Call</a>
+          </div>
+        </div>
+        <div class="hero-media" role="img" aria-label="People participating in a team building activity">
+          
+          <img src="assets/images/hero/hero.jpg" alt="Scene Flicks event hero image" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section class="quick-services container" aria-labelledby="what-we-do">
+      <h2 id="what-we-do">What we do</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Events</h3>
+          <p>At Scene Flicks Services, we create unforgettable experiences for every occasion. 
+            From dynamic team building ,to elegant weddings, lively baby showers, corporate celebrations, 
+            product launches,and large-scale community events, our expertise transforms any gathering into
+            a memorable and seamless experience. </p>
+          <a href="pages/services.html#team-building" class="btn btn-link">Learn more</a>
+        </article>
+        <article class="card">
+          <h3>Graphics Design</h3>
+          <p>Brand identities, event collateral, flyers and print-ready artwork that tell your story.</p>
+          <a href="pages/services.html#graphics-design" class="btn btn-link">See portfolio</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="featured container" aria-labelledby="featured-title">
+      <h2 id="featured-title">Featured Work</h2>
+      <div id="featured-grid" class="featured-grid">
+        <!-- Gallery preview cards will be injected by gallery.json via JS -->
+      </div>
+      <div class="view-all">
+        <a class="btn" href="pages/gallery.html">View full gallery</a>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/preloader.js" defer></script>
+  <script src="assets/js/components-loader.js" defer></script>
+  <script>
+    // Load featured gallery preview (small, client-side)
+    (function(){
+      fetch('data/gallery.json').then(r=>r.json()).then(data=>{
+        const grid = document.getElementById('featured-grid');
+        if(!grid) return;
+        const preview = data.slice(0,6);
+        preview.forEach(item=>{
+          const fig = document.createElement('figure');
+          fig.className = 'preview-card';
+          fig.innerHTML = `
+            <img src="${item.thumb}" alt="${item.title}" loading="lazy">
+            <figcaption><strong>${item.title}</strong><span>${item.category}</span></figcaption>
+          `;
+          grid.appendChild(fig);
+        });
+      }).catch(()=>{});
+    })();
+  </script>
+</body>
+</html>

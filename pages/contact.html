@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact — Scene Flicks Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    /* Contact Form Styling */
+    .contact-form {
+      max-width: 600px;
+      margin: 2rem auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .contact-form label {
+      font-weight: 600;
+      color: #333;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      transition: border-color 0.3s ease;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: #ff8800;
+      outline: none;
+    }
+
+    .contact-form button {
+      background: #ff8800;
+      color: white;
+      border: none;
+      padding: 0.9rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background: #e57600;
+    }
+
+    .contact-form textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    .muted.small {
+      text-align: center;
+      color: #777;
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      .contact-form {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main class="container">
+    <h1>Contact</h1>
+    <p>Get in touch for quotes, bookings, or general enquiries.</p>
+
+    <form id="contactForm" class="contact-form">
+      <label for="name">Name</label>
+      <input id="name" name="name" required placeholder="Your full name">
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required placeholder="your@email.com">
+
+      <label for="subject">Subject</label>
+      <input id="subject" name="subject" required placeholder="Subject of your message">
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" required placeholder="Write your message here..."></textarea>
+
+      <button class="btn btn-primary" type="submit">Send Message</button>
+    </form>
+
+    <p class="muted small">
+      or call <strong>+254703212820</strong>
+    </p>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="../assets/js/components-loader.js" defer></script>
+
+  <script>
+    // Open default email app with form data
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const name = encodeURIComponent(document.getElementById("name").value);
+      const email = encodeURIComponent(document.getElementById("email").value);
+      const subject = encodeURIComponent(document.getElementById("subject").value);
+      const message = encodeURIComponent(document.getElementById("message").value);
+
+      const fullSubject = `New message from ${name}: ${subject}`;
+      const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
+
+      window.location.href = `mailto:sceneflicks@gmail.com?subject=${fullSubject}&body=${body}`;
+    });
+  </script>
+</body>
+</html>
