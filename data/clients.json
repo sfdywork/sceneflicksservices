@@ -1,1 +1,112 @@
-{}
+[
+  {
+    "id": 1,
+    "name": "Intripet Limited",
+    "project": "Team Building — Intripet Limited",
+    "category": "Corporate Events",
+    "logo": "assets/images/clients/intripet.png",
+    "image": "assets/images/events/event-1.jpg",
+    "type": "event",
+    "description": "A fun-filled team building experience designed to strengthen communication, trust, and collaboration among the Intripet Limited staff."
+  },
+  {
+    "id": 2,
+    "name": "Private Event — Baby Shower",
+    "project": "Outdoor Retreat — Baby Shower",
+    "category": "Events",
+    "logo": "assets/images/clients/sflogo.png",
+    "image": "assets/images/events/event-2.jpg",
+    "type": "event",
+    "description": "An elegant outdoor baby shower event, complete with decor, music, and games for a memorable celebration."
+  },
+  {
+    "id": 3,
+    "name": "Frank De Hair Art",
+    "project": "Company Logo — Frank De Hair Art",
+    "category": "Branding",
+    "logo": "assets/images/clients/frank.png",
+    "image": "assets/images/flyers/flyer2.png",
+    "type": "logo",
+    "description": "A sleek and modern logo created for Frank De Hair Art, reflecting creativity and sophistication."
+  },
+  {
+    "id": 4,
+    "name": "Watu Sacco",
+    "project": "Team Workshop — Watu Sacco",
+    "category": "Corporate Events",
+    "logo": "assets/images/clients/watu.png",
+    "image": "assets/images/events/event-3.jpg",
+    "type": "event",
+    "description": "A productive workshop combining team-building exercises with motivational sessions to enhance teamwork at Watu Sacco."
+  },
+  {
+    "id": 5,
+    "name": "Lawyers Firm",
+    "project": "Team Building — Lawyers Firm",
+    "category": "Corporate Events",
+    "logo": "assets/images/clients/sflogo.png",
+    "image": "assets/images/events/event-5.jpg",
+    "type": "event",
+    "description": "A dynamic team-building day for a leading legal firm, focusing on leadership, collaboration, and strategy."
+  },
+  {
+    "id": 6,
+    "name": "SHOFCO Girls",
+    "project": "Team Building — SHOFCO Girls",
+    "category": "Community Events",
+    "logo": "assets/images/clients/shofco.png",
+    "image": "assets/images/events/event-6.jpg",
+    "type": "event",
+    "description": "A vibrant and inspiring team event empowering young girls through teamwork, creativity, and fun challenges."
+  },
+  {
+    "id": 7,
+    "name": "KCB Bank",
+    "project": "Team Building — KCB Branch",
+    "category": "Corporate Events",
+    "logo": "assets/images/clients/kcb.png",
+    "image": "assets/images/events/event-7.jpg",
+    "type": "event",
+    "description": "An engaging team bonding session for KCB Branch staff, enhancing motivation and workplace synergy."
+  },
+  {
+    "id": 8,
+    "name": "Kings School",
+    "project": "Team Building — Kings School",
+    "category": "Educational Events",
+    "logo": "assets/images/clients/sflogo.png",
+    "image": "assets/images/events/event-8.jpg",
+    "type": "event",
+    "description": "A fun-filled and educational team-building day focused on teamwork, leadership, and communication for Kings School staff."
+  },
+  {
+    "id": 9,
+    "name": "Macflex Ltd",
+    "project": "Team Building — Macflex Ltd",
+    "category": "Corporate Events",
+    "logo": "assets/images/clients/macflex.png",
+    "image": "assets/images/events/event-9.jpg",
+    "type": "event",
+    "description": "An energetic team-building event designed to strengthen unity and morale at Macflex Ltd."
+  },
+  {
+    "id": 10,
+    "name": "PG Bison Ltd",
+    "project": "Team Building — PG Bison Ltd",
+    "category": "Corporate Events",
+    "logo": "assets/images/clients/pgbisonkenya.jpg",
+    "image": "assets/images/events/event-10.jpg",
+    "type": "event",
+    "description": "An exciting corporate retreat focused on teamwork, leadership, and creative problem-solving for PG Bison Ltd."
+  },
+  {
+    "id": 11,
+    "name": "Citam Church",
+    "project": "Team Building — Citam Church",
+    "category": "Church Events",
+    "logo": "assets/images/clients/citam.png",
+    "image": "assets/images/events/event-10.jpg",
+    "type": "event",
+    "description": "An event focused on teamwork, leadership, and creative problem-solving for Citam Church."
+  }
+]

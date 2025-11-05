@@ -1,0 +1,69 @@
+.clients-section {
+  font-family: 'Poppins', sans-serif;
+  padding: 80px 5%;
+  background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+  color: #fff;
+  text-align: center;
+}
+
+.clients-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #ff8800;
+}
+
+.clients-hero p {
+  font-size: 1.1rem;
+  color: #ddd;
+  max-width: 700px;
+  margin: 0 auto 60px;
+}
+
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.client-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 20px;
+  width: 100%;
+  max-width: 320px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.client-card:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 136, 0, 0.15);
+  box-shadow: 0 8px 20px rgba(255,136,0,0.3);
+}
+
+.client-logo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.client-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #ff8800;
+  margin-bottom: 5px;
+}
+
+.client-category {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-bottom: 10px;
+}
+
+.client-desc {
+  font-size: 0.95rem;
+  color: #ccc;
+  line-height: 1.5;
+}
