@@ -5,43 +5,6 @@
 }
 
 /* Hero Section */
-.about-hero {
-  position: relative;
-  height: 65vh;
-  background: url('../images/about-bg.jpg') center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  overflow: hidden;
-}
-
-.about-hero .hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(2px);
-}
-
-.about-hero .hero-text {
-  position: relative;
-  z-index: 2;
-  max-width: 800px;
-  padding: 20px;
-  animation: fadeInUp 1.2s ease-out;
-}
-
-.about-hero h1 {
-  font-size: 3rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  background: linear-gradient(90deg, #ff8800, #ffffff, #ff8800);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: 300% 300%;
-  animation: fadeInDown 1.2s ease-out, glowShift 8s ease-in-out infinite;
-}
-
 .about-hero p {
   color: #ddd;
   font-weight: 400;
@@ -122,7 +85,7 @@
 .about-hero {
   position: relative;
   height: 65vh;
-  background: url('../images/about-bg.jpg') center/cover no-repeat;
+  background: url('../images/hero/hero.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -134,7 +97,7 @@
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(1px);
 }
 
 .about-hero .hero-text {
@@ -151,5 +114,4 @@
   text-transform: uppercase;
   background: linear-gradient(90deg, #ff8800, #ffffff, #ff8800);
   -webkit-background-clip: text;
-  -webk
-
+}

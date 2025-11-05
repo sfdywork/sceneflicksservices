@@ -23,9 +23,9 @@
   {
     "id": 4,
     "title": "Company Logo \u2014 Frank De Hair Art",
-    "category": "Flyers",
+    "category": "logos",
     "thumb": "assets/images/flyers/flyer2.png",
-    "type": "flyer"
+    "type": "logo"
   },
   {
     "id": 5,
@@ -40,5 +40,54 @@
     "category": "Flyers",
     "thumb": "assets/images/flyers/flyer-3.png",
     "type": "flyer"
+  },
+  {
+    "id": 7,
+    "title": "Team Building \u2014 Watu Sacco",
+    "category": "Events",
+    "thumb": "assets/images/events/event-4.jpg",
+    "type": "event"
+  },
+  {
+    "id": 8,
+    "title": "Team Building \u2014 Lawyers Firm",
+    "category": "Events",
+    "thumb": "assets/images/events/event-5.jpg",
+    "type": "event"
+  },
+  {
+    "id": 9,
+    "title": "Team Building \u2014 SHOFCO Girls",
+    "category": "Events",
+    "thumb": "assets/images/events/event-6.jpg",
+    "type": "event"
+  },
+  {
+    "id": 10,
+    "title": "Team Building \u2014 KCB BRANCH",
+    "category": "Events",
+    "thumb": "assets/images/events/event-7.jpg",
+    "type": "event"
+  },
+  {
+    "id": 7,
+    "title": "Team Building \u2014 Kings School",
+    "category": "Events",
+    "thumb": "assets/images/events/event-8.jpg",
+    "type": "event"
+  },
+  {
+    "id": 7,
+    "title": "Team Building \u2014 MACFLEX LTD",
+    "category": "Events",
+    "thumb": "assets/images/events/event-9.jpg",
+    "type": "event"
+  },
+  {
+    "id": 7,
+    "title": "Team Building \u2014 PG Bison LTD",
+    "category": "Events",
+    "thumb": "assets/images/events/event-10.jpg",
+    "type": "event"
   }
 ]
