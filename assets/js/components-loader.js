@@ -9,11 +9,11 @@
       const html = await res.text();
       el.innerHTML = html;
 
+      // Adjust paths dynamically
+      fixHeaderLinks();
+
       // After injecting header, wire nav interactions if present
-      if(id === 'site-header') {
-        attachNavHandlers();
-        fixLogoPath(); // ✅ moved logo fix here so it runs after header loads
-      }
+      if(id === 'site-header') attachNavHandlers();
     } catch(e) {
       console.warn('component load failed', url, e);
     }
@@ -37,13 +37,25 @@
     }));
   }
 
-  // Fix logo path for both root and subpages ✅
-  function fixLogoPath() {
-    const logo = document.getElementById("site-logo");
-    if (logo) {
-      const pathPrefix = window.location.pathname.includes("/pages/") ? "../" : "";
-      logo.src = `${pathPrefix}assets/images/logo/sceneflickslogo.png`;
+  // Fix links depending on where the page is located
+  function fixHeaderLinks(){
+    const isSubpage = window.location.pathname.includes('/pages/');
+    const prefix = isSubpage ? '../' : '';
+
+    // Fix logo
+    const logo = document.getElementById('site-logo');
+    if(logo){
+      logo.src = `${prefix}assets/images/logo/sceneflickslogo.png`;
     }
+
+    // Fix nav links
+    document.querySelectorAll('.nav-list a').forEach(link => {
+      const href = link.getAttribute('href');
+      if(!href) return;
+      if(!href.startsWith('http') && !href.startsWith(prefix)){
+        link.setAttribute('href', prefix + href.replace(/^\/+/,''));
+      }
+    });
   }
 
   // Detect path depth (root or /pages/)
