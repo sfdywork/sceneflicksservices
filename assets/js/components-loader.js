@@ -29,8 +29,8 @@
   }
 
   // mount components
-  loadComponent('site-header','/components/header.html');
-  loadComponent('site-footer','/components/footer.html');
+  loadComponent('site-header','components/header.html');
+  loadComponent('site-footer','components/footer.html');
 })();
 
 // Inject favicon
