@@ -55,3 +55,11 @@ window.addEventListener("scroll", () => {
     header.classList.toggle("scrolled", window.scrollY > 50);
   }
 });
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sceneflicksservices/sw.js')
+      .then(reg => console.log('Service Worker registered!', reg))
+      .catch(err => console.error('Service Worker failed:', err));
+  });
+}
