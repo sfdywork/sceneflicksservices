@@ -6,6 +6,9 @@
   <title>Services Scene Flicks Services</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="manifest" href="/sceneflicksservices/manifest.json">
+<meta name="theme-color" content="#cd8510">
+
 </head>
 <body>
   <div id="site-header"></div>
@@ -39,33 +42,33 @@
                            <section id="hot-teasers">
                              <h2>Hot teasers</h2>
                              <div class="teaser-scroll-container">
-                               <div class="teaser-item" onclick="window.location.href='contact.html'">
-                                 <video muted autoplay loop playsinline>
-                                   <source src="../assets/videos/KINGS SCHOOL TEAM BUILDING.mp4" type="video/mp4">
-                                 </video>
-                                 <h3>TEACHERS TEAM BUILDING</h3>
-                                 <p>5% OFF</p>
-                                 <div class="countdown" id="teaser1-timer"></div>
-                               </div>
-                               <div class="teaser-item" onclick="window.location.href='contact.html'">
-                                 <video muted autoplay loop playsinline>
-                                   <source src="../assets/videos/PG BISON KENYA TEAM BUILDING.mp4" type="video/mp4">
-                                 </video>
-                                 <h3>CORPORATE TEAM BUILDING</h3>
-                                 <p>10% OFF</p>
-                                 <div class="countdown" id="teaser2-timer"></div>
-                               </div>
-                               <div class="teaser-item" onclick="window.location.href='contact.html'">
-                                 <video muted autoplay loop playsinline>
-                                   <source src="../assets/videos/C1 FINAL.mp4" type="video/mp4">
-                                 </video>
-                                 <h3>STUDENTS TEAM BUILDING</h3>
-                                 <p>15% OFF</p>
-                                 <div class="countdown" id="teaser3-timer"></div>
-                               </div>
+                               
+                              <div class="teaser-item">
+                              <video class="video-thumb" muted autoplay loop playsinline data-video="../assets/videos/KINGS SCHOOL TEAM BUILDING.mp4"></video>
+                              <h3 onclick="window.location.href='contact.html'">TEACHERS TEAM BUILDING</h3>
+                              <p>5% OFF</p>
+                              <div class="countdown" id="teaser1-timer"></div>
+                            </div>
+
+
+                                 <div class="teaser-item">
+                              <video class="video-thumb" muted autoplay loop playsinline data-video="../assets/videos/PG BISON KENYA TEAM BUILDING.mp4"></video>
+                              <h3 onclick="window.location.href='contact.html'">CORPORATE TEAM BUILDING</h3>
+                              <p>10% OFF</p>
+                              <div class="countdown" id="teaser1-timer"></div>
+                            </div>
+
+                               <div class="teaser-item">
+                              <video class="video-thumb" muted autoplay loop playsinline data-video="../assets/videos/C1 FINAL.mp4"></video>
+                              <h3 onclick="window.location.href='contact.html'">STUDENTS TEAM BUILDING</h3>
+                              <p>15% OFF</p>
+                              <div class="countdown" id="teaser1-timer"></div>
+                            </div>
+
                              </div>
                            </section>
 
+                         
 <!-- JavaScript for Booking Section and Countdown Timers -->
                          <script>
                            // Toggle Pax Dropdown
@@ -119,7 +122,60 @@
                            startCountdown('teaser2-timer', now + 4 * 24 * 60 * 60 * 1000);
                            startCountdown('teaser3-timer', now + 2 * 24 * 60 * 60 * 1000);
                          </script>
-                           
+
+                      <!-- Video Modal -->
+<div id="video-modal" class="video-modal">
+  <div class="video-modal-content">
+    <span class="video-modal-close">&times;</span>
+    <video id="modal-video" controls></video>
+  </div>
+</div>
+  
+        <script>
+document.querySelectorAll('.teaser-item .video-thumb').forEach(thumb => {
+  const videoSrc = thumb.getAttribute('data-video');
+
+  // Make thumbnail autoplay silently
+  thumb.setAttribute('muted', true);
+  thumb.setAttribute('autoplay', true);
+  thumb.setAttribute('loop', true);
+  thumb.setAttribute('playsinline', true);
+
+  // Clear any old content and add source
+  thumb.innerHTML = `<source src="${videoSrc}" type="video/mp4">`;
+
+  // Click opens modal with sound
+  thumb.addEventListener('click', () => {
+    const modal = document.getElementById('video-modal');
+    const modalVideo = document.getElementById('modal-video');
+    modalVideo.src = videoSrc;
+    modalVideo.muted = false;   // sound enabled in modal
+    modal.style.display = 'block';
+    modalVideo.play();
+  });
+});
+
+// Close modal
+document.querySelector('.video-modal-close').addEventListener('click', () => {
+  const modal = document.getElementById('video-modal');
+  const modalVideo = document.getElementById('modal-video');
+  modalVideo.pause();
+  modalVideo.src = '';
+  modal.style.display = 'none';
+});
+
+// Close modal when clicking outside video
+window.addEventListener('click', e => {
+  const modal = document.getElementById('video-modal');
+  const modalVideo = document.getElementById('modal-video');
+  if (e.target == modal) {
+    modalVideo.pause();
+    modalVideo.src = '';
+    modal.style.display = 'none';
+  }
+});
+</script>
+                
                        </body>
                          </main>
     
