@@ -90,3 +90,14 @@
     document.head.appendChild(theme);
   }
 })();
+
+document.addEventListener("DOMContentLoaded", () => {
+  const baseURL = window.location.origin + "/sceneflicksservices";
+  document.querySelectorAll("header a, footer a").forEach(link => {
+    let href = link.getAttribute("href");
+    if (href && !href.startsWith("http") && !href.startsWith("#")) {
+      link.setAttribute("href", baseURL + href.replace("..", ""));
+    }
+  });
+});
+
