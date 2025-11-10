@@ -9,18 +9,120 @@
 </head>
 <body>
   <div id="site-header"></div>
-  <main class="container">
-    <h1>Our Services</h1>
-    <section id="team-building">
-      <h2>Events</h2>
-      <p>We design on-site and off-site event programs with clear objectives: communication, 
-        trust, problem-solving and morale.</p>
-    </section>
-    <section id="graphics-design">
-      <h2>Graphics Design</h2>
-      <p>Brand identities, event collateral, posters, flyers and social media assets. We deliver 
-        print-ready and web-friendly files.</p>
-    </section>
+  <main id="main-content" class="site-main">
+          
+         <!-- Plan Your service Section -->
+                           <section id="service-planner">
+                             <h2>Our services</h2>
+                             <div class="service-scroll-container">
+                               <div class="service-item" onclick="window.location.href='contact.html'">
+                                 <img src="../assets/images/events/event-1.jpg" alt="Tam Building" />
+                                 <div class="service-name">Team Building</div>
+                               </div>
+                               <div class="service-item" onclick="window.location.href='contact.html'">
+                                 <img src="../assets/images/flyers/flyer-1.png" alt="Flyers" />
+                                 <div class="service-name">Flyers</div>
+                               </div>
+                               <div class="service-item" onclick="window.location.href='contact.html'">
+                                 <img src="../assets/images/events/event-2.jpg" alt="Decorations" />
+                                 <div class="service-name">Decorations</div>
+                               </div>
+                               <div class="service-item" onclick="window.location.href='contact.html'">
+                                 <img src="../assets/images/flyers/flyer2.png" alt="Logos" />
+                                 <div class="service-name">Logos</div>
+                               </div>
+                               </div>                               
+                             </div>
+                           </section>
+
+                  <!-- VIDEO TEASER SECTION -->
+                           <section id="hot-teasers">
+                             <h2>Hot teasers</h2>
+                             <div class="teaser-scroll-container">
+                               <div class="teaser-item" onclick="window.location.href='contact.html'">
+                                 <video muted autoplay loop playsinline>
+                                   <source src="../assets/videos/KINGS SCHOOL TEAM BUILDING.mp4" type="video/mp4">
+                                 </video>
+                                 <h3>SCHOOL TEAM BUILDING</h3>
+                                 <p>15% OFF</p>
+                                 <div class="countdown" id="teaser1-timer"></div>
+                               </div>
+                               <div class="teaser-item" onclick="window.location.href='contact.html'">
+                                 <video muted autoplay loop playsinline>
+                                   <source src="../assets/videos/PG BISON KENYA TEAM BUILDING.mp4" type="video/mp4">
+                                 </video>
+                                 <h3>CORPORATE TEAM BUILDING</h3>
+                                 <p>10% OFF</p>
+                                 <div class="countdown" id="teaser2-timer"></div>
+                               </div>
+                               <div class="teaser-item" onclick="window.location.href='contact.html'">
+                                 <video muted autoplay loop playsinline>
+                                   <source src="../assets/videos/C1 FINAL.mp4" type="video/mp4">
+                                 </video>
+                                 <h3>VIDEOGRAPHY</h3>
+                                 <p>5% OFF</p>
+                                 <div class="countdown" id="teaser3-timer"></div>
+                               </div>
+                             </div>
+                           </section>
+
+<!-- JavaScript for Booking Section and Countdown Timers -->
+                         <script>
+                           // Toggle Pax Dropdown
+                           function togglePaxDropdown() {
+                             var dropdown = document.getElementById('pax-dropdown');
+                             dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+                           }
+                           function closePaxDropdown() {
+                             document.getElementById('pax-dropdown').style.display = 'none';
+                             // Optional: Update the pax summary based on the values
+                             var adults = document.getElementById('adults').value;
+                             var children = document.getElementById('children').value;
+                             var rooms = document.getElementById('rooms').value;
+                             document.getElementById('pax-summary').innerText = adults + ' Adults, ' + children + ' Children, ' + rooms + ' Rooms';
+                           }
+                           
+                           // Increment and decrement functions for counters
+                           function increment(id) {
+                             var input = document.getElementById(id);
+                             input.value = parseInt(input.value) + 1;
+                           }
+                           function decrement(id) {
+                             var input = document.getElementById(id);
+                             if (parseInt(input.value) > 0) {
+                               input.value = parseInt(input.value) - 1;
+                             }
+                           }
+                           
+                           // Countdown Timer Functionality
+                           function startCountdown(id, expiryDate) {
+                             const countdownEl = document.getElementById(id);
+                             const interval = setInterval(() => {
+                               const now = new Date().getTime();
+                               const distance = expiryDate - now;
+                           
+                               if (distance < 0) {
+                                 clearInterval(interval);
+                                 countdownEl.innerHTML = "Expired";
+                               } else {
+                                 const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                                 const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                                 const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                                 countdownEl.innerHTML = `${days}d ${hours}h ${minutes}m`;
+                               }
+                             }, 1000);
+                           }
+                           
+                           const now = new Date().getTime();
+                           // Set countdowns (using arbitrary durations for demo)
+                           startCountdown('teaser1-timer', now + 3 * 24 * 60 * 60 * 1000);
+                           startCountdown('teaser2-timer', now + 4 * 24 * 60 * 60 * 1000);
+                           startCountdown('teaser3-timer', now + 2 * 24 * 60 * 60 * 1000);
+                         </script>
+                           
+                       </body>
+                         </main>
+    
   </main>
   <div id="site-footer"></div>
   <script src="../assets/js/components-loader.js" defer></script>

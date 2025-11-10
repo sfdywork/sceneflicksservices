@@ -32,14 +32,14 @@
 
 /* Content Section */
 .about-content {
-  background: #111;
+  background: #100901;
   padding: 60px 20px;
   line-height: 1.8;
   color: #ddd;
 }
 
 .about-content h2 {
-  color: #ff8800;
+  color: #cd8510;
   margin-top: 40px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -74,7 +74,7 @@
   left: 0;
   width: 0%;
   height: 4px;
-  background: linear-gradient(90deg, #ff8800, #ffffff, #ff8800);
+  background: linear-gradient(90deg, #cd8510, #ffffff, #cd8510);
   z-index: 9999;
   transition: width 0.2s ease;
   background-size: 300% 300%;
@@ -112,6 +112,6 @@
   font-size: 3rem;
   font-weight: 800;
   text-transform: uppercase;
-  background: linear-gradient(90deg, #ff8800, #ffffff, #ff8800);
+  background: linear-gradient(90deg, #cd8510, #ffffff, #cd8510);
   -webkit-background-clip: text;
 }

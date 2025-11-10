@@ -86,7 +86,7 @@
 
     const theme = document.createElement('meta');
     theme.name = 'theme-color';
-    theme.content = '#ff8800';
+    theme.content = '#cd8510ff';
     document.head.appendChild(theme);
   }
 })();

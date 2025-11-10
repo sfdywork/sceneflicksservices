@@ -9,7 +9,7 @@
 .clients-hero h1 {
   font-size: 3rem;
   margin-bottom: 10px;
-  color: #ff8800;
+  color: #cd8510;
 }
 
 .clients-hero p {
@@ -27,7 +27,7 @@
 }
 
 .client-card {
-  background: rgba(255, 255, 255, 0.05);
+  background: #100901;
   border-radius: 20px;
   padding: 20px;
   width: 100%;
@@ -52,7 +52,7 @@
 .client-name {
   font-size: 1.3rem;
   font-weight: 600;
-  color: #ff8800;
+  color: #cd8510;
   margin-bottom: 5px;
 }
 

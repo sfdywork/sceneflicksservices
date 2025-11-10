@@ -108,5 +108,45 @@
     "image": "assets/images/events/event-10.jpg",
     "type": "event",
     "description": "An event focused on teamwork, leadership, and creative problem-solving for Citam Church."
+  },
+  {
+    "id": 12,
+    "name": "Kenya Power",
+    "project": "Team Building — Kenya Power",
+    "category": "Corporate Events",
+    "logo": "assets/images/clients/kenyapower.png",
+    "image": "assets/images/events/event-10.jpg",
+    "type": "event",
+    "description": "This event focuses on all tech works."
+  },
+  {
+    "id": 13,
+    "name": "Equity Bank",
+    "project": "Team Building — Equity Bank",
+    "category": "Corporate Events",
+    "logo": "assets/images/clients/equity.png",
+    "image": "assets/images/events/event-10.jpg",
+    "type": "event",
+    "description": "On of the best events we did with Equity branch members."
+  },
+  {
+    "id": 14,
+    "name": "Bidco",
+    "project": "Team Building — Bidco LTD",
+    "category": "Corporate Events",
+    "logo": "assets/images/clients/bidco.png",
+    "image": "assets/images/events/event-10.jpg",
+    "type": "event",
+    "description": "Bidco LTD Team Building and Conference."
+  },
+  {
+    "id": 15,
+    "name": "Tower Sacco",
+    "project": "Team Building — Tower Sacco",
+    "category": "Corporate Events",
+    "logo": "assets/images/clients/tower.png",
+    "image": "assets/images/events/event-10.jpg",
+    "type": "event",
+    "description": "A conference for Tower Sacco-in Naivasha Kenya."
   }
 ]
