@@ -9,9 +9,9 @@
   {
     "id": 2,
     "title": "Outdoor Retreat \u2014 Baby Shower",
-    "category": "Events",
+    "category": "Decorations",
     "thumb": "assets/images/events/event-2.jpg",
-    "type": "event"
+    "type": "decoration"
   },
   {
     "id": 3,
@@ -70,24 +70,80 @@
     "type": "event"
   },
   {
-    "id": 7,
+    "id": 11,
     "title": "Team Building \u2014 Kings School",
     "category": "Events",
     "thumb": "assets/images/events/event-8.jpg",
     "type": "event"
   },
   {
-    "id": 7,
+    "id": 12,
     "title": "Team Building \u2014 MACFLEX LTD",
     "category": "Events",
     "thumb": "assets/images/events/event-9.jpg",
     "type": "event"
   },
   {
-    "id": 7,
+    "id": 13,
     "title": "Team Building \u2014 PG Bison LTD",
     "category": "Events",
     "thumb": "assets/images/events/event-10.jpg",
     "type": "event"
+  },
+  {
+    "id": 14,
+    "title": "Retreat \u2014 Birthday",
+    "category": "Decorations",
+    "thumb": "assets/images/decorations/deco1.jpg",
+    "type": "decoration"
+  },
+  {
+    "id": 15,
+    "title": "Retreat \u2014 Graduation",
+    "category": "Decorations",
+    "thumb": "assets/images/decorations/deco2.jpg",
+    "type": "decoration"
+  },
+  {
+    "id": 16,
+    "title": "Retreat \u2014 Baby Shower",
+    "category": "Decorations",
+    "thumb": "assets/images/decorations/deco3.jpg",
+    "type": "decoration"
+  },
+  {
+    "id": 17,
+    "title": "Retreat \u2014 Birthday",
+    "category": "Decorations",
+    "thumb": "assets/images/decorations/deco4.jpg",
+    "type": "decoration"
+  },
+  {
+    "id": 18,
+    "title": "Retreat \u2014 Table Decorations",
+    "category": "Decorations",
+    "thumb": "assets/images/decorations/deco5.jpg",
+    "type": "decoration"
+  },
+  {
+    "id": 19,
+    "title": "Retreat \u2014 Graduation",
+    "category": "Decorations",
+    "thumb": "assets/images/decorations/deco6.jpg",
+    "type": "decoration"
+  },
+  {
+    "id": 20,
+    "title": "Retreat \u2014 Graduation",
+    "category": "Decorations",
+    "thumb": "assets/images/decorations/deco7.jpg",
+    "type": "decoration"
+  },
+  {
+    "id": 14,
+    "title": "Retreat \u2014 Photo Booth",
+    "category": "Decorations",
+    "thumb": "assets/images/decorations/deco8.jpg",
+    "type": "decoration"
   }
 ]
